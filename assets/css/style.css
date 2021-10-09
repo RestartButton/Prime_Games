@@ -38,33 +38,18 @@ body{
     float: right;
    
 }
-#carrossel1{
+#carrosselItem{
     margin-left: 4%;
-    max-width: 50%;
+    max-width: 75%;
     max-height: 30%;
     height: auto;
     width: auto;
-}
-#carrossel2{
-    margin-left: 4%;
-    max-width: 50%;
-    max-height: 30%;
-    height: auto;
-    width: auto;
-}
-#carrossel3{
-    margin-left: 4%;
-    max-width: 50%;
-    max-height: 30%;
-    width: auto;
-    height: auto;
 }
 .carousel-inner{
-    margin-left: 20%;
-    margin-right: 20%;
+    padding-left: 15%;
 }
 .carousel-control-prev{
-    margin-left: 10%;
+    margin-left: 13%;
 }
 .carousel-control-next{
     margin-right: 13%;;
