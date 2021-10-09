@@ -1,3 +1,24 @@
 body{
     background-color: #2C2541;
 }
+
+.navbar a{
+    color: #FFF !important;
+}
+
+.navbar p{
+    color: #FFF !important;
+}
+
+.navbar-dark{
+    background-color: #262037;
+}
+
+.transparent{
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.my-6{
+    margin-top: 60;
+    margin-bottom: 60;
+}
