@@ -22,3 +22,9 @@ body{
     margin-top: 60;
     margin-bottom: 60;
 }
+
+.h1{
+    font-family: Freight Sans;
+    font-weight: bold;
+    color: white;
+}
