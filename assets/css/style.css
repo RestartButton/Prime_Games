@@ -40,17 +40,15 @@ body{
 }
 #carrosselItem{
     margin-left: 4%;
-    max-width: 75%;
-    max-height: 30%;
+    max-width: 65%;
     height: auto;
-    width: auto;
 }
 .carousel-inner{
-    padding-left: 15%;
+    padding-left: 21.25%;
 }
 .carousel-control-prev{
-    margin-left: 13%;
+    margin-left: 18%;
 }
 .carousel-control-next{
-    margin-right: 13%;;
+    margin-right: 18%;
 }
