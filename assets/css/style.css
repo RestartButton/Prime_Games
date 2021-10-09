@@ -32,3 +32,9 @@ body{
     max-width: 100%;
     height: auto;
 }
+#img_zap{
+    max-width: 10%;
+    height: auto;
+    float: right;
+   
+}
