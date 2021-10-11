@@ -52,3 +52,47 @@ body{
 .carousel-control-next{
     margin-right: 18%;
 }
+
+.conteiner-a{
+    margin-right: 100px;
+    display: inline-block;
+    width: 40%;
+}
+.conteiner-b{
+    display: inline-block;
+    width: 40%;
+}
+.conteiner-a-titulo{
+    margin-top: 75px;
+    margin-right: 100px;
+    display: inline-block;
+    width: 40%;
+}
+.conteiner-b-titulo{
+    margin-top: 75px;
+    display: inline-block;
+    width: 40%;
+}
+#img-equipe{
+    width: 600px;
+    height: auto;
+    margin-bottom: 25px;
+}
+#logo-facebook{
+    display: inline-block;
+    margin-right: 20px;
+}
+#logo-instagram{
+    display: inline-block;
+}
+#img-logo{
+    width: 60px;
+    height: auto;
+}
+.p{
+    font-family: Freight Sans;
+    font-size: 24pt;
+    font-weight: lighter;
+    text-align: justify;
+    color: white;
+}
