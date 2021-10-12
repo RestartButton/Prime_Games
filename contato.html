@@ -5,6 +5,7 @@
         <link href="assets/libs/bootstrap-5.1.1-dist/css/bootstrap.css" rel="stylesheet"/>
         <link href="assets/libs/bootstrap-5.1.1-dist/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="assets/css/style.css" rel="stylesheet"/>
+        <link href="assets/css/contato.css" rel="stylesheet"/>
     </head>
     <body>
         <header class="navbar navbar-expand-lg navbar-dark sticky-top flex-md-nowrap">
@@ -25,8 +26,22 @@
         </header>
         <div class="container-fluid">
             <div class="row">
-                <main class="ms-sm-auto px-md-4">
-                    
+                <main class="ms-sm-auto px-md-4 mt-5">
+                    <div class="mt-5">
+
+                        <h1 class="h1 mx-3">ENTRE EM CONTATO CONOSCO</h1>
+                        
+                        <form class="mt-4" name="contato">
+                        
+                            <input class="mt-4" type="text" id="nomeid" placeholder="Fulaninho de Tal" required="required" name="nome" />
+                            <input class="mt-4" type="email" id="emailid" placeholder="fulaninhodetal@dominio.com" name="email" />
+                            <input class="mt-4" type="text" id="assuntoid" placeholder="Assunto" name="assunto" />
+                            <textarea class="mt-4" placeholder="Mensagem:" name="message"></textarea>
+                            <button class="enviar">Enviar</button>
+    
+                        </form>
+                    </div>
+
                 </main>
             </div>
         </div>

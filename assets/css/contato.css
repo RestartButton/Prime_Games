@@ -1,0 +1,41 @@
+form {
+    max-width: 1000px;
+}
+
+input, textarea {
+    width: 565px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    border-color: transparent;
+    background-color: #262037;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.enviar {
+    background-color: #262037;
+    border-color: transparent;
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    color: #FFF;
+    margin-left: 20px;
+}
+
+textarea {
+    width: 565px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 565px;
+}
+
+form label {
+    color: #FFFFFF;
+    font-weight: bold;
+}
