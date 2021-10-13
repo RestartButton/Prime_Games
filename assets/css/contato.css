@@ -1,13 +1,13 @@
 form {
-    max-width: 1000px;
+    max-width: 40%;
 }
 
 input, textarea {
-    width: 565px;
+    width: 75.5%;
     padding: 10px;
     color: black;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 3%;
+    margin-top: 3%;
     border: 1px solid;
 }
 
@@ -21,18 +21,18 @@ input:hover, textarea:hover, input:focus, textarea:focus {
 .enviar {
     background-color: #262037;
     border-color: transparent;
-    height: 25px;
-    width: 100px;
+    height: 5%;
+    width: 12%;
     border-radius: 5px;
     color: #FFF;
-    margin-left: 20px;
+    margin-left: 4%;
 }
 
 textarea {
-    width: 565px;
-    height: 120px;
-    line-height: 20px;
-    max-width: 565px;
+    width: 75.5%;
+    height: 25%;
+    line-height: 100%;
+    max-width: 75.5%;
 }
 
 form label {
