@@ -30,7 +30,7 @@ body{
 }
 #img1{
     max-width: 100%;
-    height: 100px;
+    height: auto;
 }
 #img_zap{
     max-width: 10%;
