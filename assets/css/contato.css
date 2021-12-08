@@ -9,6 +9,7 @@ input, textarea {
     margin-left: 3%;
     margin-top: 3%;
     border: 1px solid;
+    resize: none;
 }
 
 input:hover, textarea:hover, input:focus, textarea:focus {
