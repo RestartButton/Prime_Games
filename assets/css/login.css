@@ -1,0 +1,34 @@
+.centro
+{
+    max-width: 50%;
+    margin: auto;
+    background-color: #262037;
+}
+imput
+{
+    width: 100%;
+    padding:12px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    color: black;
+}
+input[type=submit] {
+    background-color: #2C2541;
+    color: white;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 5px;
+}
+input:hover, input:focus
+{
+    border-color: transparent;
+    background-color: #262037;
+    color: #FFF;
+    font-weight: bold;
+}
