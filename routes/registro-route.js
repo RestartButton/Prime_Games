@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db');
 
-router.get('/register', function(req, res, next) {
-    res.render('registration-form');
+router.get('/registro', (req, res) => {
+    res.render('registro.html');
 });
 
 router.post('/register', function(req, res, next) {

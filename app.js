@@ -14,21 +14,26 @@ app.engine('html', require('hbs').__express);
 const publicDirectory = path.join (__dirname, './assets/css')
 app.use(express.static(publicDirectory));
 
-const publicImg = path.join (__dirname, './assets/img/')
+const publicImg = path.join (__dirname, './assets/img')
 app.use(express.static(publicImg));
 
-const publicJs = path.join (__dirname, './assets/js/')
+const publicJs = path.join (__dirname, './assets/js')
 app.use(express.static(publicJs));
 
-const publicLibs = path.join (__dirname, './assets/libs/')
-app.use(express.static(publicLibs));
+const publicBootstrapCSS = path.join (__dirname, './assets/libs/bootstrap/css')
+app.use(express.static(publicBootstrapCSS));
+
+const publicBootstrapJS = path.join (__dirname, './assets/libs/bootstrap/js')
+app.use(express.static(publicBootstrapJS));
 
 
 //define routes
-app.get('/', (req,res) => {
-    // res.send('{"content": "Node JS: Express home page - First access"}');
-    res.render("index.html");
-});
+
+var indexRouter = require('./routes/index-route');
+var registroRouter = require('./routes/registro-route');
+
+app.use('/', indexRouter);
+app.use('/', registroRouter);
 
 
 //inicialize web server

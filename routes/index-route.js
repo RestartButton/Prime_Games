@@ -1,7 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/index', function(req, res, next) {
-    res.render('index')
+router.get('/', (req, res) => {
+    res.render('index.html');
+});
+
+router.get('/index', (req, res) => {
+    res.render('index.html');
 });
 module.exports = router;
