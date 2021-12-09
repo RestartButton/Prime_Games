@@ -40,6 +40,7 @@ CREATE TABLE jogo(
 	nome VARCHAR(150),
 	genero VARCHAR(50),
 	desenvolvedora VARCHAR(150),
+    url VARCHAR(500),
 	status VARCHAR(50)
 );
 
