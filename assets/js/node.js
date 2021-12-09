@@ -23,6 +23,7 @@ app.engine('html', require('hbs').__express);
 const MYSQL_IP = "localhost";
 const MYSQL_LOGIN = "root";
 const { MYSQL_PASSWORD } = require('../../config.json');
+const { Console } = require('console');
 
 let con = mysql.createConnection({
   host:  MYSQL_IP,
@@ -31,8 +32,15 @@ let con = mysql.createConnection({
   database: "primegames"
 });
 
-const publicDirectory = path.join (__dirname, '../css/')
+const publicDirectory = path.join (__dirname, '../css')
 app.use(express.static(publicDirectory));
+console.log(publicDirectory);
+
+const publicImg = path.join (__dirname, '../img/')
+app.use(express.static(publicImg));
+
+const publicJs = path.join (__dirname, '../js/')
+app.use(express.static(publicJs));
 
 con.connect(function(err) {
   if (err){
