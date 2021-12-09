@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const { MYSQL_PASSWORD } = require('../../config.json');
+const { MYSQL_PASSWORD } = require('./config.json');
 
 let con = mysql.createConnection({
   host:  "localhost",
