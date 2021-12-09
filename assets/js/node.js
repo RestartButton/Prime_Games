@@ -3,10 +3,21 @@
 const express = require('express');
 const mysql = require('mysql');
 
+var exphbs  = require('express-handlebars');
+
+
+var hbs = exphbs.create({ /* config */ });
+
+// Register `hbs.engine` with the Express app.
+
+
+// ...still have a reference to `hbs`, on which methods like `loadPartials()`
+// can be called.
 
 const app = express();
 
-
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 //initialize mysql connection
 const MYSQL_IP = "localhost";
 const MYSQL_LOGIN = "root";
@@ -18,6 +29,10 @@ let con = mysql.createConnection({
   password: MYSQL_PASSWORD,
   database: "primegames"
 });
+const publicDirectory = path.join (__dirname, '../css')
+app.use(express.static(publicDirectory));
+
+app.set('view engine','hbs');
 
 con.connect(function(err) {
   if (err){
@@ -49,23 +64,23 @@ app.post('/messages', function (req, res) {
 
 */
 
-app.get('/cardapioJSON', function(req, res){
-  console.log("GET")
-  const sql = "select * from cardapio";
-  con.query(sql, function(err, result) {
-    if (err) throw err;
-    console.log("Result: ", result)
-    res.status(200);
-    res.setHeader('Content-Type', 'application/json')
-    res.send(JSON.stringify(result))
-  })
-})
+// app.get('/cardapioJSON', function(req, res){
+//   console.log("GET")
+//   const sql = "select * from cardapio";
+//   con.query(sql, function(err, result) {
+//     if (err) throw err;
+//     console.log("Result: ", result)
+//     res.status(200);
+//     res.setHeader('Content-Type', 'application/json')
+//     res.send(JSON.stringify(result))
+//   })
+// })
 
   //define routes and its behaviors
 app.get('/', function (req, res) {
-  res.send('{"content": "Node JS: Express home page - First access"}');
-  
-})
+  // res.send('{"content": "Node JS: Express home page - First access"}');
+  res.render("/index.html");
+});
 
 
 
