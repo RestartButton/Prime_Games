@@ -40,11 +40,12 @@ input:hover, input:focus
 
 /* style the container */
 .container {
-    margin-top: 10%;
+    max-width: 73%;
     position: relative;
     border-radius: 5px;
     background-color: #262037;
     padding: 20px 0 30px 0;
+    margin: 10% auto auto auto;
 }
 
 /* style inputs and link buttons */
