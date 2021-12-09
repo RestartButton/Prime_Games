@@ -2,11 +2,11 @@
 //npm install mysql
 const express = require('express');
 const mysql = require('mysql');
+const path = require('path');
 
 var exphbs  = require('express-handlebars');
-
-
 var hbs = exphbs.create({ /* config */ });
+const app = express();
 
 // Register `hbs.engine` with the Express app.
 
@@ -14,10 +14,11 @@ var hbs = exphbs.create({ /* config */ });
 // ...still have a reference to `hbs`, on which methods like `loadPartials()`
 // can be called.
 
-const app = express();
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+
+app.set('view engine', 'html');
+app.engine('html', require('hbs').__express);
+
 //initialize mysql connection
 const MYSQL_IP = "localhost";
 const MYSQL_LOGIN = "root";
@@ -29,10 +30,9 @@ let con = mysql.createConnection({
   password: MYSQL_PASSWORD,
   database: "primegames"
 });
-const publicDirectory = path.join (__dirname, '../css')
-app.use(express.static(publicDirectory));
 
-app.set('view engine','hbs');
+const publicDirectory = path.join (__dirname, '../css/')
+app.use(express.static(publicDirectory));
 
 con.connect(function(err) {
   if (err){
@@ -77,9 +77,9 @@ app.post('/messages', function (req, res) {
 // })
 
   //define routes and its behaviors
-app.get('/', function (req, res) {
+app.get('/', (req,res) => {
   // res.send('{"content": "Node JS: Express home page - First access"}');
-  res.render("/index.html");
+  res.render("index.html");
 });
 
 
