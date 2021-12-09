@@ -8,9 +8,9 @@ const app = express();
 
 
 //initialize mysql connection
-const MYSQL_IP="localhost";
-const MYSQL_LOGIN="root";
-const MYSQL_PASSWORD="admin";
+const MYSQL_IP = "localhost";
+const MYSQL_LOGIN = "root";
+const { MYSQL_PASSWORD } = require('../../config.json');
 
 let con = mysql.createConnection({
   host:  MYSQL_IP,
