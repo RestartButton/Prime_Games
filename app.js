@@ -20,9 +20,18 @@ app.use(serveStatic(publicDirectory));
 
 var indexRouter = require('./routes/index-route');
 var registroRouter = require('./routes/registro-route');
+var catalogoRouter = require('./routes/catalogo-route');
+var contatoRouter = require('./routes/contato-route');
+var loginRouter = require('./routes/login-route');
+var sobreRouter = require('./routes/sobre-route');
+
 
 app.use('/', indexRouter);
 app.use('/', registroRouter);
+app.use('/', catalogoRouter);
+app.use('/', contatoRouter);
+app.use('/', loginRouter);
+app.use('/', sobreRouter);
 
 
 //inicialize web server

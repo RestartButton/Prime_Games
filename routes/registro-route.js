@@ -6,21 +6,21 @@ router.get('/registro', (req, res) => {
     res.render('registro.html');
 });
 
-router.post('/register', function(req, res, next) {
+router.post('/registro', function(req, res, next) {
     inputData = {
-        first_name: req.body.name+ req.body.lastname,
-        email_address: req.body.email,
+        nome: req.body.name+ req.body.lastname,
+        email: req.body.email,
         telefone: req.body.telefone,
-        password: req.body.password,
-        confirm_password: req.body.passconfirmation
+        senha: req.body.password,
+        confirmar_senha: req.body.passconfirmation
     }
 
     var sql = 'SELECT * FROM usuario WHERE email =?';
-    db.query(sql, [inputData.email_address], function(err, data, fields) {
+    db.query(sql, [inputData.email], function(err, data, fields) {
         if(err) throw err
         if(data.length > 1) {
-            var msg = inputData.email_address+ " ja existe";
-        }else if(inputData.confirm_password != inputData.password) {
+            var msg = inputData.email+ " ja existe";
+        }else if(inputData.confirmar_senha != inputData.senha) {
             var msg = "Senha e confirmacao nao combinam";
         }else {
             var sql = 'INSERT INTO usuario SET ?';
