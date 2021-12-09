@@ -70,7 +70,7 @@ CREATE TABLE alteracoes(
     id_administrador INT,
     id_catalogo INT,
     tipo VARCHAR(50),
-    CONSTRAINT fk_administrador_alteracoes FOREIGN KEY (id_administrador) REFERENCES administrador(id),
-    CONSTRAINT fk_catalogo_administrador FOREIGN KEY (id_catalogo) REFERENCES catalogo(id)
+   	CONSTRAINT fk_administrador_alteracoes FOREIGN KEY (id_administrador) REFERENCES administrador(id),
+	CONSTRAINT fk_catalogo_administrador FOREIGN KEY (id_catalogo) REFERENCES catalogo(id)
 );
 
