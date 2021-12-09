@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3333;
 const path = require('path');
-
+var serveStatic = require('serve-static')
 
 //define view engine
 app.set('view engine', 'html');
@@ -11,20 +11,9 @@ app.engine('html', require('hbs').__express);
 
 
 //define static directories
-const publicDirectory = path.join (__dirname, './assets/css')
-app.use(express.static(publicDirectory));
+const publicDirectory = path.join (__dirname, './assets')
+app.use(serveStatic(publicDirectory));
 
-const publicImg = path.join (__dirname, './assets/img')
-app.use(express.static(publicImg));
-
-const publicJs = path.join (__dirname, './assets/js')
-app.use(express.static(publicJs));
-
-const publicBootstrapCSS = path.join (__dirname, './assets/libs/bootstrap/css')
-app.use(express.static(publicBootstrapCSS));
-
-const publicBootstrapJS = path.join (__dirname, './assets/libs/bootstrap/js')
-app.use(express.static(publicBootstrapJS));
 
 
 //define routes
