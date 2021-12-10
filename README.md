@@ -33,6 +33,6 @@ Caso seja a sua primeira vez executando o projeto, talvez seja necessário execu
 ![Cadastro](https://user-images.githubusercontent.com/63310837/145567579-4241cca2-0b19-484e-b23f-e0bf13591dd2.png)
 
 <br> 
-<h4> Função especial de conta, que reconhece quando usuário está logado (mostrando log out ou opção e apagar cadastro) e quando não estiver logado, leva para o Login</h4>
+<h4> Função especial de conta, que reconhece quando usuário está logado (mostrando log out ou opção de apagar cadastro) e quando não estiver logado, leva para o Login</h4>
 
 ![image](https://user-images.githubusercontent.com/63310837/145567504-004893e7-589d-42af-b063-d0c431ee89d1.png)
