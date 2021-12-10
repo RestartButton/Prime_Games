@@ -8,7 +8,7 @@ router.get('/registro', (req, res) => {
 
 router.post('/registro', function(req, res, next) {
     inputData = {
-        nome: req.body.name+ req.body.lastname,
+        nome: req.body.name+ " "+ req.body.lastname,
         email: req.body.email,
         telefone: req.body.telefone,
         senha: req.body.password,
@@ -20,16 +20,25 @@ router.post('/registro', function(req, res, next) {
         if(err) throw err
         if(data.length > 1) {
             var msg = inputData.email+ " ja existe";
+            res.render('registro.html', {alertMsg:msg});
         }else if(inputData.confirmar_senha != inputData.senha) {
             var msg = "Senha e confirmacao nao combinam";
+            res.render('registro.html', {alertMsg:msg});
         }else {
+            usuario = {
+                nome: inputData.nome,
+                email: inputData.email,
+                senha: inputData.senha,
+                telefone: inputData.telefone  
+            }
             var sql = 'INSERT INTO usuario SET ?';
-            db.query(sql, inputData, function(err, data) {
+            db.query(sql, usuario, function(err, data) {
                 if (err) throw err;
             });
             var msg = "Usuario cadastrado com sucesso!";
+            res.redirect('login');
         }
-        res.render('registration-form', {alertMsg:msg});
+        
     })
 });
 module.exports = router;

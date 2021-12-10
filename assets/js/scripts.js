@@ -1,3 +1,4 @@
+/*
 class Validator {
 
   constructor() {
@@ -194,3 +195,4 @@ submit.addEventListener('click', function(e) {
 
   validator.validate(form);
 });
+*/
