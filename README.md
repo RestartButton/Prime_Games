@@ -15,10 +15,13 @@ onde no lugar de 'password' você deverá colocar a senha do usuário 'root' de 
 
 
 Para testar o projeto, siga os passos a seguir:
-
-1.  Abra um console na raiz do projeto
-2.  Execute o comando 'node app.js'
-3.  No seu navegador, cole o link 'http://localhost:3333' na barra de navegação
+<ol>
+  <li>Abra um console na raiz do projeto </li>
+  <li>  Execute o comando 'node app.js'  </li>
+  <li>No seu navegador, cole o link 'http://localhost:3333' na barra de navegação </li>
+ </ol> 
 
 Caso seja a sua primeira vez executando o projeto, talvez seja necessário executar os querries da pasta
 'assets/bd_archives' no MySQL Workbench, para inicialização do banco de dados.
+
+# Telas do site
