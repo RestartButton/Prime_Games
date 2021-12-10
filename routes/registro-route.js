@@ -4,7 +4,11 @@ var db = require('../db');
 var sha1 = require('sha1');
 
 router.get('/registro', (req, res) => {
-    res.render('registro.html');
+    if(req.session.loggedinUser != true) {
+        res.render('registro.html');
+    }else {
+        res.redirect('conta');
+    }
 });
 
 router.post('/registro', function(req, res, next) {
