@@ -34,7 +34,9 @@ var catalogoRouter = require('./routes/catalogo-route');
 var contatoRouter = require('./routes/contato-route');
 var loginRouter = require('./routes/login-route');
 var sobreRouter = require('./routes/sobre-route');
-const req = require('express/lib/request');
+var contaRouter = require('./routes/conta-route');
+var logoutRouter = require('./routes/logout-route');
+var deleteRouter = require('./routes/delete-route');
 
 
 app.use('/', indexRouter);
@@ -43,6 +45,9 @@ app.use('/', catalogoRouter);
 app.use('/', contatoRouter);
 app.use('/', loginRouter);
 app.use('/', sobreRouter);
+app.use('/', contaRouter);
+app.use('/', logoutRouter);
+app.use('/', deleteRouter);
 
 
 //inicialize web server

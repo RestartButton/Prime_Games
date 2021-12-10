@@ -3,9 +3,15 @@ var router = express.Router();
 var db = require('../db');
 var sha1 = require('sha1');
 
+
 router.get('/login', (req, res) => {
-    res.render('login.html');
+    if(req.session.loggedinUser != true) {
+        res.render('login.html');
+    }else {
+        res.redirect('conta');
+    }
 });
+
 
 router.post('/login', function(req, res){
     var email = req.body.email;

@@ -16,10 +16,10 @@ router.post('/registro', function(req, res, next) {
         confirmar_senha: req.body.passconfirmation
     }
 
-    var sql = 'SELECT * FROM usuario WHERE email =?';
-    db.query(sql, [inputData.email], function(err, data, fields) {
+    var sql = 'SELECT COUNT(*) AS cnt FROM usuario WHERE email =?';
+    db.query(sql, [inputData.email], function(err, data) {
         if(err) throw err
-        if(data.length > 1) {
+        if(data[0].cnt > 0) {
             var msg = inputData.email+ " ja existe";
             res.render('registro.html', {alertMsg:msg});
         }else if(inputData.confirmar_senha != inputData.senha) {
