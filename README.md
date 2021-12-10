@@ -1,7 +1,6 @@
 # Prime_Games
 
-Este é um projeto criado para a disciplina de Programação WEB da Universidade do Vale do Itajaí (UNIVALI),
-PARA FINS EDUCACIONAIS.
+Este é um projeto criado para a disciplina de Programação WEB da Universidade do Vale do Itajaí (UNIVALI), **PARA FINS EDUCACIONAIS**.
 Criado pelos acadêmicos: Leonardo B da Silveira, Rogério FB Júnior e Victor T de Carvalho.
 
 Antes de testar o projeto, é necessário criar o arquivo 'config.json' na raiz do projeto e colar o seguinte
