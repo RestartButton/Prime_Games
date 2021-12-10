@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+var sha1 = require('sha1');
 
 router.get('/login', (req, res) => {
     res.render('login.html');
@@ -8,7 +9,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', function(req, res){
     var email = req.body.email;
-    var senha = req.body.password;
+    var senha = sha1(req.body.password);
     var sql='SELECT * FROM usuario WHERE email =? AND senha =?';
     db.query(sql, [email, senha], function(err, data, fields) {
         if(err) throw err

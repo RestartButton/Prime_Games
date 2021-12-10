@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../db');
+var sha1 = require('sha1');
 
 router.get('/registro', (req, res) => {
     res.render('registro.html');
@@ -28,7 +29,7 @@ router.post('/registro', function(req, res, next) {
             usuario = {
                 nome: inputData.nome,
                 email: inputData.email,
-                senha: inputData.senha,
+                senha: sha1(inputData.senha),
                 telefone: inputData.telefone  
             }
             var sql = 'INSERT INTO usuario SET ?';
