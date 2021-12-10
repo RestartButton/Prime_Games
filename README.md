@@ -34,4 +34,5 @@ Caso seja a sua primeira vez executando o projeto, talvez seja necessário execu
 
 <br> 
 <h2> Função especial e conta que reconhece quando usuário está logado (mostrano log out ou opção e apagar cadastro) e quando não estiver logado, leva para o Login</h2>
+
 ![image](https://user-images.githubusercontent.com/63310837/145567504-004893e7-589d-42af-b063-d0c431ee89d1.png)
